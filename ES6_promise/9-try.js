@@ -1,12 +1,12 @@
 export default function guardrail(mathFunction) {
-  const queu = [];
+  const queue = [];
   try {
     const sum = mathFunction();
-    queueMicrotask.push(sum);
-  } catch (erro) {
-    queu.push(`Error: ${error.message}`);
+    queue.push(sum);
+  } catch (error) {
+    queue.push(`Error: ${error.message}`);
   } finally {
-    queu.push('Guardrail was processed');
+    queue.push('Guardrail was processed');
   }
-  return queu;
+  return queue;
 }
