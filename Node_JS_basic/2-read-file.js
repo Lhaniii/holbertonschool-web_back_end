@@ -6,7 +6,7 @@ function countStudents(path) {
     const lines = data.split('\n').filter((line) => line.trim() !== '');
     const header = lines.shift();
     if (lines.length === 0) {
-      throw new Error('No Students found');
+      throw new Error('No valid students found in the database.');
     }
 
     const studentsByField = {};
